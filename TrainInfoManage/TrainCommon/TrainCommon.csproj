@@ -1,0 +1,165 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E9EDCB0D-5903-4C7C-BA11-298445B6EC11}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrainCommon</RootNamespace>
+    <AssemblyName>TrainCommon</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <DeployDirSuffix>TrainCommon</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FormFactorID>
+    </FormFactorID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\BIN\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=1fdb50b1b62b4c84, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EasyFrom\lib\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseLibrary.cs" />
+    <Compile Include="Modle\BaseReportInfo.cs" />
+    <Compile Include="DataUtils\BaseSendData.cs" />
+    <Compile Include="DataUtils\BaseSendFile.cs" />
+    <Compile Include="BaseVoice.cs" />
+    <Compile Include="CanInfoCommon\CanAnalyzeReport.cs" />
+    <Compile Include="CanInfoCommon\CanSendRunInfo.cs" />
+    <Compile Include="CanInfoCommon\ParseCanData.cs" />
+    <Compile Include="CanInfoCommon\TrainCanInfo.cs" />
+    <Compile Include="DataDispose.cs" />
+    <Compile Include="DataUtils\DataParser.cs" />
+    <Compile Include="DataUtils\DataReply.cs" />
+    <Compile Include="DataUtils\DataSend.cs" />
+    <Compile Include="SQLCommon\DBAction.cs" />
+    <Compile Include="DialCommon\DialAction.cs" />
+    <Compile Include="Entitys\SckParamEntity.cs" />
+    <Compile Include="SQLCommon\Enum.cs" />
+    <Compile Include="FileHelper.cs" />
+    <Compile Include="TrainForm.cs" />
+    <Compile Include="UpdateUtils\FileUpdate.cs" />
+    <Compile Include="Web References\WebFileService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="XMLUtils\ItemParamHelper.cs" />
+    <Compile Include="Modle\LocoInfo.cs" />
+    <Compile Include="LogDaily.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DialCommon\RasComm.cs" />
+    <Compile Include="DialCommon\RasDail.cs" />
+    <Compile Include="DialCommon\RasDailAction.cs" />
+    <Compile Include="SocketCommon\ReceSocketDataParser.cs" />
+    <Compile Include="ReportAction.cs" />
+    <Compile Include="SQLCommon\RParams.cs" />
+    <Compile Include="SocketCommon\SckCRC16.cs" />
+    <Compile Include="SocketCommon\SckParams.cs" />
+    <Compile Include="SocketCommon\SckTrains.cs" />
+    <Compile Include="SocketCommon\SendReport.cs" />
+    <Compile Include="SocketCommon\SendWarn.cs" />
+    <Compile Include="SQLCommon\SQLHelper.cs" />
+    <Compile Include="SQLCommon\SQLiteHelper.cs" />
+    <Compile Include="FormCommon.cs" />
+    <Compile Include="UpdateUtils\UpdateBaseLibrary.cs" />
+    <Compile Include="UpdateUtils\UpdateBook.cs" />
+    <Compile Include="UpdateUtils\UpdateMedia.cs" />
+    <Compile Include="UpdateUtils\UpdateWarnItem.cs" />
+    <Compile Include="XMLUtils\XmlAction.cs" />
+    <Compile Include="XMLUtils\XmlHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://123.85.195.43:8732/MAP/FileTransportService/">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\WebFileService\</RelPath>
+      <UpdateFromURL>http://123.85.195.43:8732/MAP/FileTransportService/</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WebFileService\FileTransportService.wsdl" />
+    <None Include="Web References\WebFileService\item.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WebFileService\item.disco" />
+    <None Include="Web References\WebFileService\item0.xsd" />
+    <None Include="Web References\WebFileService\item1.xsd" />
+    <None Include="Web References\WebFileService\item2.xsd" />
+    <None Include="Web References\WebFileService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

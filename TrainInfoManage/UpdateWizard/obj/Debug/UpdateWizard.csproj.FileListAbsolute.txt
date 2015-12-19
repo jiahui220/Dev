@@ -1,0 +1,9 @@
+D:\Train\TrainInfoManage\UpdateWizard\bin\Debug\UpdateWizard.exe
+D:\Train\TrainInfoManage\UpdateWizard\bin\Debug\UpdateWizard.pdb
+D:\Train\TrainInfoManage\UpdateWizard\bin\Debug\System.Data.SQLite.dll
+D:\Train\TrainInfoManage\UpdateWizard\obj\Debug\ResolveAssemblyReference.cache
+D:\Train\TrainInfoManage\UpdateWizard\obj\Debug\UpdateWizard.LoadUpdate.resources
+D:\Train\TrainInfoManage\UpdateWizard\obj\Debug\UpdateWizard.Properties.Resources.resources
+D:\Train\TrainInfoManage\UpdateWizard\obj\Debug\UpdateWizard.csproj.GenerateResource.Cache
+D:\Train\TrainInfoManage\UpdateWizard\obj\Debug\UpdateWizard.exe
+D:\Train\TrainInfoManage\UpdateWizard\obj\Debug\UpdateWizard.pdb

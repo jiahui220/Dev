@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://123.85.195.43:8732/MAP/FileTransportService/?xsd=xsd1" filename="item.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://123.85.195.43:8732/MAP/FileTransportService/?wsdl" filename="FileTransportService.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://123.85.195.43:8732/MAP/FileTransportService/?disco" filename="item.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://123.85.195.43:8732/MAP/FileTransportService/?xsd=xsd0" filename="item0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://123.85.195.43:8732/MAP/FileTransportService/?xsd=xsd3" filename="item1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://123.85.195.43:8732/MAP/FileTransportService/?xsd=xsd2" filename="item2.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

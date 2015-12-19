@@ -1,0 +1,663 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{496B7B25-9C2D-4B0C-AC53-1AEF2CE119FB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrainView</RootNamespace>
+    <AssemblyName>TrainView</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <DeployDirSuffix>TrainView</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\BIN\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\BIN\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=1fdb50b1b62b4c84, processorArchitecture=MSIL" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataGrid" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlarmView\AlarmRecord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AlarmView\AlarmRecord.Designer.cs">
+      <DependentUpon>AlarmRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlarmView\AlarmSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AlarmView\AlarmSet.Designer.cs">
+      <DependentUpon>AlarmSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlarmView\TrainAlarm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AlarmView\TrainAlarm.Designer.cs">
+      <DependentUpon>TrainAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseFrom.Designer.cs">
+      <DependentUpon>BaseFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildFrom\Dlg_Ask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildFrom\Dlg_Ask.Designer.cs">
+      <DependentUpon>Dlg_Ask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildFrom\Dlg_Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildFrom\Dlg_Book.Designer.cs">
+      <DependentUpon>Dlg_Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildFrom\Dlg_Check_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildFrom\Dlg_Check_Detail.Designer.cs">
+      <DependentUpon>Dlg_Check_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildFrom\Dlg_Check_Note.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildFrom\Dlg_Check_Note.Designer.cs">
+      <DependentUpon>Dlg_Check_Note.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildFrom\Dlg_Check_Notice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildFrom\Dlg_Check_Notice.Designer.cs">
+      <DependentUpon>Dlg_Check_Notice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildFrom\Dlg_Connect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildFrom\Dlg_Connect.Designer.cs">
+      <DependentUpon>Dlg_Connect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildFrom\Dlg_DateNeed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildFrom\Dlg_DateNeed.Designer.cs">
+      <DependentUpon>Dlg_DateNeed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildFrom\Dlg_DriverNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildFrom\Dlg_DriverNote.Designer.cs">
+      <DependentUpon>Dlg_DriverNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildFrom\Dlg_Number.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildFrom\Dlg_Number.Designer.cs">
+      <DependentUpon>Dlg_Number.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildFrom\Dlg_Tip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildFrom\Dlg_Tip.Designer.cs">
+      <DependentUpon>Dlg_Tip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuideView\TrainGuide.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GuideView\TrainGuide.Designer.cs">
+      <DependentUpon>TrainGuide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuideView\TrainGuideAudio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GuideView\TrainGuideAudio.Designer.cs">
+      <DependentUpon>TrainGuideAudio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuideView\TrainGuideEbook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GuideView\TrainGuideEbook.Designer.cs">
+      <DependentUpon>TrainGuideEbook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuideView\TrainGuideMedia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GuideView\TrainGuideMedia.Designer.cs">
+      <DependentUpon>TrainGuideMedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuideView\TrainGuideNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GuideView\TrainGuideNode.Designer.cs">
+      <DependentUpon>TrainGuideNode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuideView\TrainGuideNotice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GuideView\TrainGuideNotice.Designer.cs">
+      <DependentUpon>TrainGuideNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuideView\TrainGuideRun.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GuideView\TrainGuideRun.Designer.cs">
+      <DependentUpon>TrainGuideRun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuideView\TrainGuiDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GuideView\TrainGuiDetail.Designer.cs">
+      <DependentUpon>TrainGuiDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuideView\TrainGuideVideo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GuideView\TrainGuideVideo.Designer.cs">
+      <DependentUpon>TrainGuideVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView\ReportBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportView\ReportBase.Designer.cs">
+      <DependentUpon>ReportBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView\ReportConnect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportView\ReportConnect.Designer.cs">
+      <DependentUpon>ReportConnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView\ReportFuel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportView\ReportFuel.Designer.cs">
+      <DependentUpon>ReportFuel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView\ReportGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportView\ReportGroup.Designer.cs">
+      <DependentUpon>ReportGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView\ReportWorkTime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportView\ReportWorkTime.Designer.cs">
+      <DependentUpon>ReportWorkTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView\TrainReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportView\TrainReport.Designer.cs">
+      <DependentUpon>TrainReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolView\TrainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolView\TrainScreen.designer.cs">
+      <DependentUpon>TrainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolView\TrainTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolView\TrainTool.Designer.cs">
+      <DependentUpon>TrainTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolView\TrainToolInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolView\TrainToolInfo.Designer.cs">
+      <DependentUpon>TrainToolInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolView\TrainToolSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolView\TrainToolSet.Designer.cs">
+      <DependentUpon>TrainToolSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrainBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TrainBase.Designer.cs">
+      <DependentUpon>TrainBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AlarmView\AlarmRecord.resx">
+      <DependentUpon>AlarmRecord.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlarmView\AlarmSet.resx">
+      <DependentUpon>AlarmSet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlarmView\TrainAlarm.resx">
+      <DependentUpon>TrainAlarm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseFrom.resx">
+      <DependentUpon>BaseFrom.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildFrom\Dlg_Ask.resx">
+      <DependentUpon>Dlg_Ask.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildFrom\Dlg_Book.resx">
+      <DependentUpon>Dlg_Book.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildFrom\Dlg_Check_Detail.resx">
+      <DependentUpon>Dlg_Check_Detail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildFrom\Dlg_Check_Note.resx">
+      <DependentUpon>Dlg_Check_Note.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildFrom\Dlg_Check_Notice.resx">
+      <DependentUpon>Dlg_Check_Notice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildFrom\Dlg_Connect.resx">
+      <DependentUpon>Dlg_Connect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildFrom\Dlg_DateNeed.resx">
+      <DependentUpon>Dlg_DateNeed.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildFrom\Dlg_DriverNote.resx">
+      <DependentUpon>Dlg_DriverNote.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildFrom\Dlg_Number.resx">
+      <DependentUpon>Dlg_Number.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildFrom\Dlg_Tip.resx">
+      <DependentUpon>Dlg_Tip.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuideView\TrainGuide.resx">
+      <DependentUpon>TrainGuide.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuideView\TrainGuideAudio.resx">
+      <DependentUpon>TrainGuideAudio.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuideView\TrainGuideEbook.resx">
+      <DependentUpon>TrainGuideEbook.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuideView\TrainGuideMedia.resx">
+      <DependentUpon>TrainGuideMedia.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuideView\TrainGuideNode.resx">
+      <DependentUpon>TrainGuideNode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuideView\TrainGuideNotice.resx">
+      <DependentUpon>TrainGuideNotice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuideView\TrainGuideRun.resx">
+      <DependentUpon>TrainGuideRun.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuideView\TrainGuiDetail.resx">
+      <DependentUpon>TrainGuiDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuideView\TrainGuideVideo.resx">
+      <DependentUpon>TrainGuideVideo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportView\ReportBase.resx">
+      <DependentUpon>ReportBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportView\ReportConnect.resx">
+      <DependentUpon>ReportConnect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportView\ReportFuel.resx">
+      <DependentUpon>ReportFuel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportView\ReportGroup.resx">
+      <DependentUpon>ReportGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportView\ReportWorkTime.resx">
+      <DependentUpon>ReportWorkTime.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportView\TrainReport.resx">
+      <DependentUpon>TrainReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolView\TrainScreen.resx">
+      <DependentUpon>TrainScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolView\TrainTool.resx">
+      <DependentUpon>TrainTool.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolView\TrainToolInfo.resx">
+      <DependentUpon>TrainToolInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolView\TrainToolSet.resx">
+      <DependentUpon>TrainToolSet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainBase.resx">
+      <DependentUpon>TrainBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Web References\WebFileService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Config.xml" />
+    <Content Include="bin\Debug\Details\0.jpg" />
+    <Content Include="bin\Debug\Details\1.jpg" />
+    <Content Include="bin\Debug\Details\2.jpg" />
+    <Content Include="bin\Debug\Details\3.png" />
+    <Content Include="bin\Debug\Details\detail_20130817105600.jpg" />
+    <Content Include="bin\Debug\Details\GIRL.JPG" />
+    <Content Include="bin\Debug\Details\TRAINFOERROR.JPG" />
+    <Content Include="bin\Debug\Details\TRAINFO_ERROR.jpg" />
+    <Content Include="bin\Debug\Details\图片1.jpg" />
+    <Content Include="bin\Debug\Details\图片2.jpg" />
+    <Content Include="bin\Debug\OpenNETCF.dll" />
+    <Content Include="bin\Debug\SQLite.Interop.DLL" />
+    <Content Include="bin\Debug\System.Data.SQLite.dll" />
+    <Content Include="bin\Debug\TCPMP 0.81\ATRC.DLL" />
+    <Content Include="bin\Debug\TCPMP 0.81\avcodec-52.dll" />
+    <Content Include="bin\Debug\TCPMP 0.81\avutil-49.dll" />
+    <Content Include="bin\Debug\TCPMP 0.81\COMMON.DLL" />
+    <Content Include="bin\Debug\TCPMP 0.81\COOK.DLL" />
+    <Content Include="bin\Debug\TCPMP 0.81\COPYING.TXT" />
+    <Content Include="bin\Debug\TCPMP 0.81\LANG_SLC.TXT" />
+    <Content Include="bin\Debug\TCPMP 0.81\PLAYER.EXE" />
+    <Content Include="bin\Debug\TCPMP 0.81\RV20.DLL" />
+    <Content Include="bin\Debug\TCPMP 0.81\RV30.DLL" />
+    <Content Include="bin\Debug\TCPMP 0.81\RV40.DLL" />
+    <Content Include="bin\Debug\TCPMP 0.81\SETUP.DLL" />
+    <Content Include="bin\Debug\TCPMP 0.81\setup_ce3.dll" />
+    <Content Include="bin\Debug\TCPMP 0.81\SIPR.DLL" />
+    <Content Include="bin\Debug\TCPMP 0.81\TCPMP.HTM" />
+    <Content Include="bin\Debug\TCPMP 0.81\WMADMOD.DLL" />
+    <Content Include="bin\Debug\TCPMP 0.81\WMSDMOD.DLL" />
+    <Content Include="bin\Debug\TCPMP 0.81\WMVDMOD.DLL" />
+    <Content Include="bin\Debug\TrainCommon.dll" />
+    <Content Include="bin\Debug\TrainCommon.pdb" />
+    <Content Include="bin\Debug\TrainView.exe" />
+    <Content Include="bin\Debug\TrainView.pdb" />
+    <Content Include="bin\Debug\UpdateTemp\arrow_down_normal.png" />
+    <Content Include="bin\Debug\UpdateTemp\TrainCommon.dll" />
+    <Content Include="bin\Debug\UpdateTemp\Trainfo.exe" />
+    <Content Include="bin\Debug\Video\红尘.wmv" />
+    <Content Include="images\alarm_down.png" />
+    <Content Include="images\alarm_normal.png" />
+    <Content Include="images\alarm_record_title.png" />
+    <Content Include="images\alarm_record_top_title.png" />
+    <Content Include="images\alarm_set_title.png" />
+    <Content Include="images\arrow_down_down.png" />
+    <Content Include="images\arrow_down_normal.png" />
+    <Content Include="images\arrow_left_down.png" />
+    <Content Include="images\arrow_left_normal.png" />
+    <Content Include="images\arrow_right_down.png" />
+    <Content Include="images\arrow_right_normal.png" />
+    <Content Include="images\arrow_up_down.png" />
+    <Content Include="images\arrow_up_normal.png" />
+    <Content Include="images\bar_bg.png" />
+    <Content Include="images\bar_bottom_bg.png" />
+    <Content Include="images\bar_bottom_left_line.png" />
+    <Content Include="images\bar_top_bg.png" />
+    <Content Include="images\bar_top_left_line.png" />
+    <Content Include="images\base_left_line.png" />
+    <Content Include="images\base_notice_no.png" />
+    <Content Include="images\base_notice_yes.png" />
+    <Content Include="images\base_signal_no.png" />
+    <Content Include="images\base_signal_yes.png" />
+    <Content Include="images\btn_panel_bottom_bg.jpg" />
+    <Content Include="images\btn_panel_top_bg.jpg" />
+    <Content Include="images\check_book_title.png" />
+    <Content Include="images\check_note_title.png" />
+    <Content Include="images\chenk_notice_title.png" />
+    <Content Include="images\datatime_icon.png" />
+    <Content Include="images\datatime_tip.png" />
+    <Content Include="images\detail_image_large_down.png" />
+    <Content Include="images\detail_image_large_normal.png" />
+    <Content Include="images\detail_image_small_down.png" />
+    <Content Include="images\detail_image_small_normal.png" />
+    <Content Include="images\dlg_bar.jpg" />
+    <Content Include="images\dlg_bottom.jpg" />
+    <Content Include="images\dlg_left.jpg" />
+    <Content Include="images\dlg_right.jpg" />
+    <Content Include="images\dlg_tip.png" />
+    <Content Include="images\dlg_title.jpg" />
+    <Content Include="images\dlg_top.jpg" />
+    <Content Include="images\fill_info_title.png" />
+    <Content Include="images\f_center_line.jpg" />
+    <Content Include="images\f_right_bottom_line.jpg" />
+    <Content Include="images\f_right_left_bottom.jpg" />
+    <Content Include="images\f_right_left_line.jpg" />
+    <Content Include="images\f_right_top_line.jpg" />
+    <Content Include="images\f_speed.png" />
+    <Content Include="images\guide_detail_title.png" />
+    <Content Include="images\guide_down.png" />
+    <Content Include="images\guide_ebook_title.png" />
+    <Content Include="images\guide_media_title.png" />
+    <Content Include="images\guide_normal.png" />
+    <Content Include="images\guide_note_title.png" />
+    <Content Include="images\guide_notice_title.png" />
+    <Content Include="images\guide_run_title.png" />
+    <Content Include="images\guide_video_play_down.png" />
+    <Content Include="images\guide_video_play_normal.png" />
+    <Content Include="images\info_down.png" />
+    <Content Include="images\info_normal.png" />
+    <Content Include="images\left_bottom.jpg" />
+    <Content Include="images\logo.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\note_icon.png" />
+    <Content Include="images\num3_down.png" />
+    <Content Include="images\num_0_down.png" />
+    <Content Include="images\num_0_normal.png" />
+    <Content Include="images\num_1_down.png" />
+    <Content Include="images\num_1_normal.png" />
+    <Content Include="images\num_2_down.png" />
+    <Content Include="images\num_2_normal.png" />
+    <Content Include="images\num_3_normal.png" />
+    <Content Include="images\num_4_down.png" />
+    <Content Include="images\num_4_normal.png" />
+    <Content Include="images\num_5_down.png" />
+    <Content Include="images\num_5_normal.png" />
+    <Content Include="images\num_6_down.png" />
+    <Content Include="images\num_6_normal.png" />
+    <Content Include="images\num_7_down.png" />
+    <Content Include="images\num_7_normal.png" />
+    <Content Include="images\num_8_down.png" />
+    <Content Include="images\num_8_normal.png" />
+    <Content Include="images\num_9_down.png" />
+    <Content Include="images\num_9_normal.png" />
+    <Content Include="images\num_c_down.png" />
+    <Content Include="images\num_c_normal.png" />
+    <Content Include="images\num_dot_down.png" />
+    <Content Include="images\num_dot_normal.png" />
+    <Content Include="images\num_icon.png" />
+    <Content Include="images\num_tip.png" />
+    <Content Include="images\processbar_1.png" />
+    <Content Include="images\processbar_2.png" />
+    <Content Include="images\processbar_3.png" />
+    <Content Include="images\processbar_4.png" />
+    <Content Include="images\report_arrow.png" />
+    <Content Include="images\report_down.png" />
+    <Content Include="images\report_normal.png" />
+    <Content Include="images\report_title.png" />
+    <Content Include="images\time_line.jpg" />
+    <Content Include="images\tool_down.png" />
+    <Content Include="images\tool_info_title.png" />
+    <Content Include="images\tool_normal.png" />
+    <Content Include="images\tool_power_off.png" />
+    <Content Include="images\tool_power_on.png" />
+    <Content Include="images\tool_set_line.png" />
+    <Content Include="images\tool_set_title.png" />
+    <Content Include="lib\OpenNETCF.dll" />
+    <Content Include="lib\SQLite.Interop.DLL" />
+    <Content Include="lib\System.Data.SQLite.dll" />
+    <None Include="Web References\WebFileService\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TrainCommon\TrainCommon.csproj">
+      <Project>{E9EDCB0D-5903-4C7C-BA11-298445B6EC11}</Project>
+      <Name>TrainCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ARM_SSFX.CFG" />
+    <None Include="bin\Debug\TCPMP 0.81\ATI3200.PLG" />
+    <None Include="bin\Debug\TCPMP 0.81\AVC.PLG" />
+    <None Include="bin\Debug\TCPMP 0.81\CAMERA.PLG" />
+    <None Include="bin\Debug\TCPMP 0.81\FFMPEG.PLG" />
+    <None Include="bin\Debug\TCPMP 0.81\FLAC.PLG" />
+    <None Include="bin\Debug\TCPMP 0.81\flvsplitter.plg" />
+    <None Include="bin\Debug\TCPMP 0.81\intel2700g.plg" />
+    <None Include="bin\Debug\TCPMP 0.81\interface.plg" />
+    <None Include="bin\Debug\TCPMP 0.81\LANGUAGE.TGZ" />
+    <None Include="bin\Debug\TCPMP 0.81\MATROSKA.PLG" />
+    <None Include="bin\Debug\TCPMP 0.81\MP3.PLG" />
+    <None Include="bin\Debug\TCPMP 0.81\MPC.PLG" />
+    <None Include="bin\Debug\TCPMP 0.81\MPEG1.PLG" />
+    <None Include="bin\Debug\TCPMP 0.81\MPEG4.PLG" />
+    <None Include="bin\Debug\TCPMP 0.81\NETWORK.PLG" />
+    <None Include="bin\Debug\TCPMP 0.81\radecoder.plg" />
+    <None Include="bin\Debug\TCPMP 0.81\RMFF.PLG" />
+    <None Include="bin\Debug\TCPMP 0.81\rvdecoder.plg" />
+    <None Include="bin\Debug\TCPMP 0.81\smart_lyric.plg" />
+    <None Include="bin\Debug\TCPMP 0.81\SPEEX.PLG" />
+    <None Include="bin\Debug\TCPMP 0.81\SPLITTER.PLG" />
+    <None Include="bin\Debug\TCPMP 0.81\SUBTITLE.PLG" />
+    <None Include="bin\Debug\TCPMP 0.81\VORBISHQ.PLG" />
+    <None Include="bin\Debug\TCPMP 0.81\VORBISLQ.PLG" />
+    <None Include="bin\Debug\TCPMP 0.81\WAVPACK.PLG" />
+    <None Include="bin\Debug\TrainDB.db" />
+    <None Include="bin\Debug\Video\ED.MP4" />
+    <None Include="bin\Debug\Video\T.MP4" />
+    <None Include="bin\Debug\Video\红尘客栈 周杰伦.mp4" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Web References\WebFileService\FileTransportService.wsdl" />
+    <None Include="Web References\WebFileService\item.xsd" />
+    <None Include="Web References\WebFileService\item0.xsd" />
+    <None Include="Web References\WebFileService\item1.xsd" />
+    <None Include="Web References\WebFileService\item2.xsd" />
+    <None Include="Web References\WebFileService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://123.85.195.43:8732/MAP/FileTransportService/">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\WebFileService\</RelPath>
+      <UpdateFromURL>http://123.85.195.43:8732/MAP/FileTransportService/</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\BackUP\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
