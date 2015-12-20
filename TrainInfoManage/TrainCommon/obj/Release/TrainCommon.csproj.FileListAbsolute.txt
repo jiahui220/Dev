@@ -1,6 +1,0 @@
-D:\Train\TrainInfoManage\TrainCommon\bin\Debug\TrainCommon.dll
-D:\Train\TrainInfoManage\TrainCommon\bin\Debug\TrainCommon.pdb
-D:\Train\TrainInfoManage\TrainCommon\bin\Debug\System.Data.SQLite.dll
-D:\Train\TrainInfoManage\TrainCommon\obj\Release\ResolveAssemblyReference.cache
-D:\Train\TrainInfoManage\TrainCommon\obj\Release\TrainCommon.dll
-D:\Train\TrainInfoManage\TrainCommon\obj\Release\TrainCommon.pdb
