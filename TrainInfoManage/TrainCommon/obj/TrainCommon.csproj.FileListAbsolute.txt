@@ -1,0 +1,10 @@
+D:\个人相关\项目\机务段项目\02_CODE\BIN\TrainCommon.dll
+D:\个人相关\项目\机务段项目\02_CODE\BIN\TrainCommon.pdb
+D:\个人相关\项目\机务段项目\02_CODE\9.17车载端源码\TrainInfoManage\TrainCommon\obj\Debug\ResolveAssemblyReference.cache
+D:\个人相关\项目\机务段项目\02_CODE\9.17车载端源码\TrainInfoManage\TrainCommon\obj\Debug\TrainCommon.dll
+D:\个人相关\项目\机务段项目\02_CODE\9.17车载端源码\TrainInfoManage\TrainCommon\obj\Debug\TrainCommon.pdb
+D:\个人相关\项目\机务段项目\02_CODE\9.17车载端源码\TrainInfoManage\TrainCommon\bin\Debug\TrainCommon.dll
+D:\个人相关\项目\机务段项目\02_CODE\9.17车载端源码\TrainInfoManage\TrainCommon\bin\Debug\TrainCommon.pdb
+D:\个人相关\项目\机务段项目\02_CODE\9.17车载端源码\TrainInfoManage\TrainCommon\obj\Release\ResolveAssemblyReference.cache
+D:\个人相关\项目\机务段项目\02_CODE\9.17车载端源码\TrainInfoManage\TrainCommon\obj\Release\TrainCommon.dll
+D:\个人相关\项目\机务段项目\02_CODE\9.17车载端源码\TrainInfoManage\TrainCommon\obj\Release\TrainCommon.pdb
