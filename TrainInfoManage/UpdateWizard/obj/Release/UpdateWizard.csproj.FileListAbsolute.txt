@@ -1,9 +1,0 @@
-D:\Train\TrainInfoManage\UpdateWizard\bin\Release\UpdateWizard.exe
-D:\Train\TrainInfoManage\UpdateWizard\bin\Release\UpdateWizard.pdb
-D:\Train\TrainInfoManage\UpdateWizard\bin\Release\System.Data.SQLite.dll
-D:\Train\TrainInfoManage\UpdateWizard\obj\Release\ResolveAssemblyReference.cache
-D:\Train\TrainInfoManage\UpdateWizard\obj\Release\UpdateWizard.LoadUpdate.resources
-D:\Train\TrainInfoManage\UpdateWizard\obj\Release\UpdateWizard.Properties.Resources.resources
-D:\Train\TrainInfoManage\UpdateWizard\obj\Release\UpdateWizard.csproj.GenerateResource.Cache
-D:\Train\TrainInfoManage\UpdateWizard\obj\Release\UpdateWizard.exe
-D:\Train\TrainInfoManage\UpdateWizard\obj\Release\UpdateWizard.pdb
